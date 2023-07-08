@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@import url('https://fonts.cdnfonts.com/css/aquire');
+
+html {
+    scroll-behavior: smooth;
+}
+
+body,
+#root,
+.app {
+    font-family: 'Roboto', sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+.side-nav {
+    height: 100vh;
+    width: 250px;
+    display: inline-flex;
+    position: sticky;
+    top: 0px;
+    overflow: hidden;
+    /* box-shadow: 5px 0 10px -3px rgb(23 23 23 / 24%); */
+    /* box-shadow: 5px 0px 5px -3px rgba(102, 102, 102, 0.5); */
+    box-shadow: 0 0 10px #00000030;
+    /* background: linear-gradient(to top, #2EAAFA, #1F2F98); */
+    /* background-color: #000033; */
+    background: linear-gradient(to top, #07a7af, #01519a);
+    z-index: 1000;
+}
+
+.side-nav-link-group {
+    height: 88vh;
+    overflow-y: scroll;
+    padding-top: 10px;
+}
+
+.side-nav-link-group a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body::-webkit-scrollbar {
+    width: 10px;
+    display: block;
+    background: #BBBBBB;
+}
+
+.side-nav-link-group::-webkit-scrollbar {
+    width: 10px;
+    display: none;
+}
+
+::-webkit-scrollbar-track {
+    background: none;
+    width: 20px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #808080;
+    border-radius: 20px;
+}
+
+body::-webkit-scrollbar-thumb {
+    border-radius: 0px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555555;
+}
+
+.user-nav-list {
+    width: 100%;
+    position: fixed;
+    top: 64px;
+    overflow: hidden;
+    transition-duration: 1s;
+    max-height: 0px;
+}
+
+@media screen and (max-width: 900px) {
+    .side-nav {
+        width: 0px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .side-nav.responsive {
+        width: 200px;
+        position: fixed;
+        top: 64px;
+        transition-duration: 200ms;
+    }
+
+    .user-nav-list.responsive {
+        max-height: 100vh;
+    }
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: calc(100vh - 64px);
+    margin: 0px auto;
+}
+
+#brand-name {
+    font-family: 'Aquire', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.error {
+    border: 1px solid #FF0000;
+    background-color: rgba(255, 0, 0, 0.1);
+    color: #FF0000;
+    font-size: 12px;
+    padding: 10px 60px;
+    border-radius: 5px;
+}
+
+#update-box {
+    display: none;
+    position: fixed;
+}
+
+#purchase-box {
+    display: none;
+}
+
+.scanner {
+    box-shadow: 0 0 10px #000000;
+    background: linear-gradient(to left, #07a7af, #01519a);
+    max-width: 400px;
+    width: 400px;
+    margin: 0px auto;
+    border-radius: 5px;
+}
+
+.scanner-display {
+    box-shadow: 0 0 10px #000000;
+    max-width: 80%;
+    margin: 0px auto;
+    border-radius: 5px;
+    height: 480px;
+    padding: 20px;
+}
+
+.profile-pic {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #f2f2f2;
+    background-image: url(/client/public/assets/user.jpg);
+}
+
+.center-box-400 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 40px 20px;
+    width: 400px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+}
+
+.center-box-400 div{
+   margin-bottom: 10px;
+}
